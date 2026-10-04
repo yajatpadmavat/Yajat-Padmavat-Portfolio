@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+}
+
+:root {
+  --surface-bg: #051424;
+  --surface-container: #122131;
+  --surface-card: #0d1c2d;
+  --surface-hover: #1c2b3c;
+  --border-color: #1e293b;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-main: #d4e4fa;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --color-primary: #4cd7f6;
+  --color-primary-dim: #06b6d4;
+  --color-secondary: #4edea3;
+  --color-secondary-dim: #10b981;
+}
+
+html.light {
+  --surface-bg: #f8fafc;
+  --surface-container: #ffffff;
+  --surface-card: #f1f5f9;
+  --surface-hover: #e2e8f0;
+  --border-color: #cbd5e1;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --color-primary: #0284c7;
+  --color-primary-dim: #0369a1;
+  --color-secondary: #059669;
+  --color-secondary-dim: #047857;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+
+/* Print Styles for Resume View */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
